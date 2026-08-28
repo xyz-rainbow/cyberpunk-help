@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="cyberpunk-help">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0614"/>
+      <stop offset="55%" stop-color="#12081f"/>
+      <stop offset="100%" stop-color="#061018"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#ff2bd6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect x="0" y="292" width="1280" height="4" fill="url(#neon)"/>
+  <text x="64" y="150" fill="#e8f7ff" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="54" font-weight="700">cyberpunk-help</text>
+  <text x="64" y="200" fill="#8ad4e8" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22">Playthrough skill for Night City — missions, map, CET, live Vortex inventory</text>
+  <text x="64" y="248" fill="#ff2bd6" font-family="Consolas, monospace" font-size="16">npx skills add xyz-rainbow/cyberpunk-help</text>
+  <circle cx="1120" cy="110" r="48" fill="none" stroke="#00f0ff" stroke-width="3"/>
+  <circle cx="1188" cy="168" r="28" fill="none" stroke="#ff2bd6" stroke-width="3"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-label="Architecture">
+  <rect width="1100" height="520" fill="#0a0614"/>
+  <text x="40" y="44" fill="#00f0ff" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700">How the agent sees your playthrough</text>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15">
+    <rect x="40" y="80" width="230" height="90" rx="10" fill="#141022" stroke="#00f0ff"/>
+    <text x="155" y="122" text-anchor="middle" fill="#e8f7ff">Signature search</text>
+    <text x="155" y="146" text-anchor="middle" fill="#8ad4e8">exe · save json · CET log</text>
+    <rect x="310" y="80" width="230" height="90" rx="10" fill="#141022" stroke="#00f0ff"/>
+    <text x="425" y="122" text-anchor="middle" fill="#e8f7ff">Local inventory</text>
+    <text x="425" y="146" text-anchor="middle" fill="#8ad4e8">patch · CET · mods</text>
+    <rect x="580" y="80" width="230" height="90" rx="10" fill="#141022" stroke="#ff2bd6"/>
+    <text x="695" y="122" text-anchor="middle" fill="#e8f7ff">Nexus (bootstrap)</text>
+    <text x="695" y="146" text-anchor="middle" fill="#8ad4e8">newer files · posts</text>
+    <rect x="850" y="80" width="210" height="90" rx="10" fill="#141022" stroke="#ff2bd6"/>
+    <text x="955" y="122" text-anchor="middle" fill="#e8f7ff">Wiki / CET docs</text>
+    <text x="955" y="146" text-anchor="middle" fill="#8ad4e8">quests · commands</text>
+    <rect x="220" y="260" width="660" height="180" rx="12" fill="#141022" stroke="#00f0ff"/>
+    <text x="550" y="310" text-anchor="middle" fill="#e8f7ff" font-size="18">Answer tagged by source</text>
+    <text x="550" y="348" text-anchor="middle" fill="#8ad4e8">save · live CET · wiki · install · nexus</text>
+    <text x="550" y="386" text-anchor="middle" fill="#ff2bd6">Never treat wiki as this save. Never write sav.dat.</text>
+  </g>
+  <path d="M270 170 L310 170" stroke="#00f0ff" stroke-width="2"/>
+  <path d="M540 170 L580 170" stroke="#00f0ff" stroke-width="2"/>
+  <path d="M810 170 L850 170" stroke="#ff2bd6" stroke-width="2"/>
+  <path d="M550 170 L550 260" stroke="#00f0ff" stroke-width="2"/>
+</svg>
