@@ -58,51 +58,26 @@ def _os_info() -> dict:
         "platform": sys.platform,
     }
     if sys.platform == "win32":
+        info["osCaption"] = "Windows"
+        info["osBuild"] = platform.version()
         try:
-            import ctypes
+            import winreg
 
-            class OSVERSIONINFOEXW(ctypes.Structure):
-                _fields_ = [
-                    ("dwOSVersionInfoSize", ctypes.c_ulong),
-                    ("dwMajorVersion", ctypes.c_ulong),
-                    ("dwMinorVersion", ctypes.c_ulong),
-                    ("dwBuildNumber", ctypes.c_ulong),
-                    ("dwPlatformId", ctypes.c_ulong),
-                    ("szCSDVersion", ctypes.c_wchar * 128),
-                ]
-
-            vi = OSVERSIONINFOEXW()
-            vi.dwOSVersionInfoSize = ctypes.sizeof(OSVERSIONINFOEXW)
-        except Exception:
-            pass
-        cap = None
-        build = None
-        try:
-            import subprocess
-
-            r = subprocess.run(
-                [
-                    "powershell",
-                    "-NoProfile",
-                    "-Command",
-                    "(Get-CimInstance Win32_OperatingSystem) | "
-                    "Select-Object -ExpandProperty Caption; "
-                    "(Get-CimInstance Win32_OperatingSystem) | "
-                    "Select-Object -ExpandProperty BuildNumber",
-                ],
-                capture_output=True,
-                text=True,
-                timeout=20,
+            key = winreg.OpenKey(
+                winreg.HKEY_LOCAL_MACHINE,
+                r"SOFTWARE\Microsoft\Windows NT\CurrentVersion",
             )
-            lines = [ln.strip() for ln in r.stdout.splitlines() if ln.strip()]
-            if lines:
-                cap = lines[0]
-            if len(lines) > 1:
-                build = lines[1]
-        except Exception:
-            cap = platform.platform()
-        info["osCaption"] = cap or "Windows"
-        info["osBuild"] = build
+            try:
+                prod, _ = winreg.QueryValueEx(key, "ProductName")
+                build, _ = winreg.QueryValueEx(key, "CurrentBuild")
+                if prod:
+                    info["osCaption"] = prod
+                if build:
+                    info["osBuild"] = str(build)
+            finally:
+                winreg.CloseKey(key)
+        except OSError:
+            info["osCaption"] = platform.platform()
     elif sys.platform == "darwin":
         info["osCaption"] = "macOS"
         try:
