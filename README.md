@@ -4,9 +4,14 @@
 
 Works on **Windows, Linux, and macOS**. The skill does **not** ship a frozen mod list or save-folder table. On each machine it **discovers** the game and saves by signature files.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
-[![skills.sh](https://img.shields.io/badge/skills.sh-cyberpunk--help-00f0ff.svg)](https://skills.sh)
-[![npx skills add](https://img.shields.io/badge/npx%20skills%20add-xyz--rainbow%2Fcyberpunk--help-ff2bd6.svg)](#one-command-installation)
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-c8ff00?style=flat-square" alt="MIT" />
+  <img src="https://img.shields.io/badge/skills.sh-cyberpunk--help-00f0ff?style=flat-square" alt="skills.sh" />
+  <img src="https://img.shields.io/badge/npx%20skills%20add-xyz--rainbow%2Fcyberpunk--help-ff2bd6?style=flat-square" alt="npx skills add" />
+  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-00ffff?style=flat-square" alt="Platform" />
+  <img src="https://img.shields.io/badge/game-Cyberpunk%202077-ff6a00?style=flat-square" alt="Cyberpunk 2077" />
+  <img src="https://img.shields.io/badge/python-3%2B-3776ab?style=flat-square&logo=python&logoColor=white" alt="Python" />
+</p>
 
 ![Banner](assets/banner.svg)
 
@@ -69,7 +74,7 @@ The script searches for `Cyberpunk2077.exe`, `vortex.deployment.json`, and save 
 
 ## GitHub topics
 
-`skills-sh` `npx-skills-add` `cyberpunk-2077` `vortex` `cyber-engine-tweaks` `ai-agent-skill` `linux` `windows` `steam-proton`
+`skills-sh` `npx-skills-add` `cyberpunk-2077` `vortex` `cyber-engine-tweaks` `ai-agent-skill` `linux` `windows` `steam-proton` `macos` `agent-skills`
 
 ## License
 
