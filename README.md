@@ -52,7 +52,7 @@ npx skills add xyz-rainbow/cyberpunk-help -g -y
 
 ## Discovery script
 
-From the skill directory:
+Resolve the skill directory from wherever `SKILL.md` lives (for example after `npx skills add`, or under `~/.grok/skills/`). Then run:
 
 ```bash
 python3 scripts/get_cp2077_help_context.py
@@ -72,9 +72,20 @@ The script searches for `Cyberpunk2077.exe`, `vortex.deployment.json`, and save 
 - No trainer / item dumps unless you explicitly ask
 - CET mutate commands (teleport, facts) only on a clear request
 
+**Performance tip:** First-run discovery seeds from Steam `libraryfolders.vdf`, your home directory, and mounted drives (`/mnt`, `/media`, etc. on Linux). On machines with large disks or many mounts, that scan can take a while. If it is slow or inconclusive, tell the agent your game root (the folder that contains `bin/x64/Cyberpunk2077.exe`) so it can skip a wide search.
+
 ## GitHub topics
 
 `skills-sh` `npx-skills-add` `cyberpunk-2077` `vortex` `cyber-engine-tweaks` `ai-agent-skill` `linux` `windows` `steam-proton` `macos` `agent-skills`
+
+## Sponsor this project
+
+If this skill saves you time in Night City, consider supporting ongoing maintenance:
+
+- [Buy Me a Coffee](https://buymeacoffee.com/xyzclouds)
+- [Ko-fi](https://ko-fi.com/xyzclouds)
+- [Patreon](https://patreon.com/xyzclouds)
+- [PayPal](https://paypal.me/rainbowkolors)
 
 ## License
 
