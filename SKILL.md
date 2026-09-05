@@ -32,19 +32,19 @@ Never paste the full mod table into `SKILL.md` or every chat reply.
 
 ## Session bootstrap
 
+Resolve the skill directory as the folder that contains this `SKILL.md` (works for `npx skills add`, `~/.grok/skills/`, or any other install path). From there:
+
 Canonical (Python 3, stdlib only):
 
 ```bash
-python3 "$HOME/.grok/skills/cyberpunk-help/scripts/get_cp2077_help_context.py"
+python3 scripts/get_cp2077_help_context.py
 ```
 
 Windows (finds `python` / `python3`):
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File "$env:USERPROFILE\.grok\skills\cyberpunk-help\scripts\Get-Cp2077HelpContext.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Get-Cp2077HelpContext.ps1
 ```
-
-If the skill was installed via `npx skills add`, run the `scripts/` copy next to this `SKILL.md` (resolve the skill directory; do not assume a username).
 
 The script **searches** for:
 
@@ -53,7 +53,7 @@ The script **searches** for:
 - save folders: `metadata.9.json` **and** `sav.dat` whose JSON looks like a CP2077 save
 - CET log by filename under the game tree
 
-It seeds from Steam `libraryfolders.vdf` if present, the home directory, and mounted drives — then follows what it finds. If discovery fails, search the same signatures yourself; **ask the user** only if nothing turns up.
+It seeds from Steam `libraryfolders.vdf` if present, the home directory, and mounted drives — then follows what it finds. That scan can be slow on large disks; if the user already knows their game root (`bin/x64/Cyberpunk2077.exe` parent), they can say so to skip a wide search. If discovery fails, search the same signatures yourself; **ask the user** only if nothing turns up.
 
 Read from the JSON (do not guess):
 
